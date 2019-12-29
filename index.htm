@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<html xmlns:ng="http://angularjs.org" id="ng-app" data-ng-app="trust">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<title>Mary Baker Eddy's Church and Deeds Restoration Fund</title>
+
+	<!--[if lt IE 8]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.6/json3.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="//code.angularjs.org/1.2.1/angular.min.js"></script>
+	<script type="text/javascript" src="//code.angularjs.org/1.2.1/angular-route.js"></script>
+
+	<script type="text/javascript" src="scripts/project.1478395015.js"></script>
+
+	<!--<link rel="stylesheet" type="text/css" href="styles/main.less" />-->
+	<link rel="stylesheet/less" type="text/css" href="styles/main.less" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
+
+</head>
+
+<body ng-controller="PageController" ng-class="$route.current.id" data-routing="{{$route.current}}">
+
+	<header id="title_area">
+
+		<figure class="image_wrapper">
+			<img src="styles/images/potsCrop.png" />
+		</figure>
+
+		<div class="page">
+
+			<div class="wrapper">
+
+				<h1>Mary Baker Eddy's Church and Deeds Restoration Fund</h1>
+
+				<nav>
+					<ul>
+						<li ng-repeat="link in main" ng-class="{active:($route.current.id == link.id || $route.current.parent == link.id)}">
+							<a data-spy="{{link.id}}" data-navitem href="{{link.uri}}">{{link.name}}</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+
+
+		</div>
+
+
+
+
+	</header>
+
+
+	<div id="content_area" ng-class="{sub:$route.current.parent}">
+
+		<div class="page">
+
+			<div data-ng-switch data-on="$route.current.parent" class="subnav_wrapper">
+
+				<div ng-switch-when="documents" class="subnav">
+
+					<ul class="first">
+						<li ng-repeat="link in introduction" ng-class="{active:($route.current.id == link.id)}">
+							<a data-navitem href="{{link.uri}}">{{link.name}}</a>
+						</li>
+
+						<li>Trust Deeds
+							<ul>
+								<li ng-repeat="link in trustDeeds" ng-class="{active:($route.current.id == link.id)}">
+									<a data-navitem href="{{link.uri}}">{{link.name}}</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>Other Writings by Mary Baker Eddy
+							<ul>
+								<li ng-repeat="link in otherWritings" ng-class="{active:($route.current.id == link.id)}">
+									<a data-navitem href="{{link.uri}}">{{link.name}}</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>Other
+							<ul>
+								<li ng-repeat="link in others" ng-class="{active:($route.current.id == link.id)}">
+									<a data-navitem href="{{link.uri}}">{{link.name}}</a>
+								</li>
+							</ul>
+						</li>
+
+
+					</ul>
+
+
+				</div>
+
+				<div ng-switch-when="court-documents" class="subnav">
+
+					<ul class="first">
+
+						<li>Court Documents
+							<ul>
+								<li>
+									<a href="assets/MotionToAmendMotionForReconsideration.pdf">2018-04-30 Motion to Amend Motion for Reconsideration</a>
+								</li>
+								<li>
+									<a href="assets/MotionToAmendMotionForReconsideration.pdf">2018-04-30 Motion to Amend Motion for Reconsideration</a>
+								</li>
+								<li>
+									<a href="assets/MotionToAmendMotionForReconsideration.pdf">2018-04-30 Motion to Amend Motion for Reconsideration</a>
+								</li>
+								<li>
+									<a href="assets/MotionToAmendMotionForReconsideration.pdf">2018-04-30 Motion to Amend Motion for Reconsideration</a>
+								</li>
+								<li>
+									<a href="assets/ResponseToTrusteesObjection-2017-12-11.pdf">2017-12-11 Second Church's response to Trustees' Objection</a>
+								</li>
+								<li>
+									<a href="assets/MemorandumOnFirstAmendment.pdf">2017-11-18 Memorandum on First Amendment</a>
+								</li>
+								<li>
+									<a href="assets/MemorandumConcerningStanding.pdf">2017-11-18 Memorandum Concerning Standing</a>
+								</li>
+								<li>
+									<a href="assets/MotionForAppointmentOfIndependentTrustee.pdf">2017-11-18 Motion for Appointment of Independent Trustee</a>
+								</li>
+
+								<li>
+									<a href="assets/nonEvidentiaryHearing-2017-09-22.pdf">2017-09-22 Non-Evidentiary Hearing</a>
+								</li>
+								<li>
+									<a href="assets/ResponseToObjectionOfAmicusBrief-2017-08-04.pdf">2017-08-28 Response to Objection of Amicus Brief</a>
+								</li>
+								<li>
+									<a href="assets/AmicusBrief-2017-08-04.pdf">2017-08-04 Amicus Brief</a>
+								</li>
+								<li>
+									<a href="assets/CourtDecisionOnMotionsToAmend.pdf">2017-04-04 Court Decision on Motions to Amend</a>
+								</li>
+								<li>
+									<a href="assets/SecondChurchsResponseToTrusteesObjection.pdf">2017-02-28 Second Church's Response to Trustees' Objection</a>
+								</li>
+								<li>
+									<a href="assets/AppendixToAmicusBrief.pdf">2017-02-15 Appendix to Amicus Brief</a>
+								</li>
+								<li>
+									<a href="assets/AmicusBrief.pdf">2017-02-15 Amicus Brief</a>
+								</li>
+								<li ng-repeat="link in courtDocuments" ng-class="{active:($route.current.id == link.id)}">
+									<a data-navitem href="{{link.uri}}">{{link.name}}</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+
+				</div>
+
+			</div>
+
+
+			<div data-ng-view></div>
+
+
+		</div>
+
+	</div>
+
+
+	<footer>
+
+        <div class="page">
+
+
+
+
+
+
+        </div>
+
+	</footer>
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-303454-12', 'mbefund.net');
+		ga('send', 'pageview');
+
+	</script>
+
+</body>
+</html>

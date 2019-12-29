@@ -1,0 +1,177 @@
+/****************************************************************
+* vertical align
+****************************************************************/
+
+.vAlignParent {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+.vAlignChild {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/****************************************************************
+* clear
+****************************************************************/
+
+.clear {
+	*zoom:1;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+/****************************************************************
+* border-radius
+****************************************************************/
+
+.border-radius(@tlr:0, @trr:@tlr, @brr:@tlr, @blr:@tlr) {
+	-webkit-border-top-left-radius: @tlr;
+	-webkit-border-top-right-radius: @trr;
+	-webkit-border-bottom-right-radius: @brr;
+	-webkit-border-bottom-left-radius: @blr;
+	-moz-border-radius-topleft: @tlr;
+	-moz-border-radius-topright: @trr;
+	-moz-border-radius-bottomright: @brr;
+	-moz-border-radius-bottomleft: @blr;
+	border-top-left-radius: @tlr;
+	border-top-right-radius: @trr;
+	border-bottom-right-radius: @brr;
+	border-bottom-left-radius: @blr;
+}
+
+/* less.js < 1.4.0-beta */
+/* .border-radius(20px, 20px, 20px, 20px); */
+
+/* lessphp */
+/* .border-radius(20px); */
+/* .border-radius(20px, 20px, 20px, 20px); */
+
+
+/****************************************************************
+* opacity
+****************************************************************/
+
+.opacity(@o:0) {
+	-moz-opacity: @o;
+	-khtml-opacity: @o;
+	-webkit-opacity: @o;
+	opacity: @o;
+	@oie: @o * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{oie})";
+	filter: ~"alpha(opacity=@{oie})";
+}
+
+/* .opacity(0.5); */
+
+
+/****************************************************************
+* box-sizing
+****************************************************************/
+
+.box-sizing(@b) {
+	-webkit-box-sizing: @b;
+	-moz-box-sizing: @b;
+	box-sizing: @b;
+}
+
+/* .box-sizing(border-box); */
+
+
+/****************************************************************
+* triangles
+****************************************************************/
+
+.triangle(@d,@c,@w,@h) when (@d = top) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 @w/2 @h @w/2;
+	border-color: transparent transparent @c transparent;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = top-right) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 @w @h 0;
+	border-color: transparent @c transparent transparent;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = right) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: @h/2 0 @h/2 @w;
+	border-color: transparent transparent transparent @c;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = bottom-right) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 0 @h @w;
+	border-color: transparent transparent @c transparent;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = bottom) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: @h @w/2 0 @w/2;
+	border-color: @c transparent transparent transparent;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = bottom-left) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: @h 0 0 @w;
+	border-color: transparent transparent transparent @c;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = left) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: @h/2 @w @h/2 0;
+	border-color: transparent @c transparent transparent;
+}
+
+.triangle(@d,@c,@w,@h) when (@d = top-left) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: @h @w 0 0;
+	border-color: @c transparent transparent transparent;
+}
+
+/* top; top-right; right; bottom-right; bottom; bottom-left; left; top-left */
+/* direction, color, width, height */
+/* .triangle(top-left, #007bff, 50px, 40px); */
+
+
+
+/****************************************************************
+* transitions
+****************************************************************/
+
+.transition(@p,@dur,@f,@del) {
+	-webkit-transition: @p @dur @f @del;
+	-moz-transition: @p @dur @f @del;
+	-o-transition: @p @dur @f @del;
+	transition: @p @dur @f @del;
+}
+/* property, duration, timing-function, delay */
+/* .transition(width, 0.2s, linear, 0s); */
