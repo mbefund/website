@@ -70,6 +70,10 @@ app.factory('NavigationLinks', function() {
 		uri: '#/documents/1907-Deed-of-Trust',
 		name: '1907 Deed of Trust and Performance Bond',
 		id: '1907'
+	}, {
+		uri: '#/documents/1908-Supplementary-Property-Trust-Deed',
+		name: '1908 Supplementary Property Trust Deed',
+		id: '1908'
 	}];
 
 	Links.otherWritings = [{
@@ -210,6 +214,11 @@ app.config( [ '$routeProvider', '$locationProvider', function ($routeProvider, $
 		.when('/documents/1907-Deed-of-Trust', {
 			templateUrl: 'partials/1907.html',
 			id: '1907',
+			parent: 'documents'
+		})
+		.when('/documents/1908-Supplementary-Property-Trust-Deed', {
+			templateUrl: 'partials/1908.html',
+			id: '1908',
 			parent: 'documents'
 		})
 		.when('/documents/Archival-Letters', {
