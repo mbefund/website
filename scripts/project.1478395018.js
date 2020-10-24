@@ -71,7 +71,7 @@ app.factory('NavigationLinks', function() {
 		name: '1907 Deed of Trust and Performance Bond',
 		id: '1907'
 	}, {
-		uri: '/assets/1907 Deed of trust for Copyrights.pdf',
+		uri: '/assets/1907 Deed of Trust for Copyrights.pdf',
 		name: '1907 Deed of Trust for Copyrights',
 		id: '1907copyrights'
 	}, {
