@@ -71,6 +71,10 @@ app.factory('NavigationLinks', function() {
 		name: '1907 Deed of Trust and Performance Bond',
 		id: '1907'
 	}, {
+		uri: '#/documents/1907-Deed-of-Trust-for-Copyrights',
+		name: '1907 Deed of Trust for Copyrights',
+		id: '1907copyrights'
+	}, {
 		uri: '#/documents/1908-Supplementary-Property-Trust-Deed',
 		name: '1908 Supplementary Property Trust Deed',
 		id: '1908'
@@ -214,6 +218,11 @@ app.config( [ '$routeProvider', '$locationProvider', function ($routeProvider, $
 		.when('/documents/1907-Deed-of-Trust', {
 			templateUrl: 'partials/1907.html',
 			id: '1907',
+			parent: 'documents'
+		})
+		.when('/documents/1907-Deed-of-Trust-for-Copyrights', {
+			templateUrl: 'partials/1907 Deed of trust for Copyrights.pdf',
+			id: '1907copyrights',
 			parent: 'documents'
 		})
 		.when('/documents/1908-Supplementary-Property-Trust-Deed', {
