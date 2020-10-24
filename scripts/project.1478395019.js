@@ -91,17 +91,17 @@ app.factory('NavigationLinks', function() {
 	}];
 
 	Links.other = [{
-        uri: '#/documents/1913-CSS-Appt-Trustees-MBE',
-        name: '1913 Court Appointment of Trustees u/w MBE',
-        id: '1913-css-appt-trustees-mbe'
-    }, {
-        uri: '#/documents/1914-Purpose-Clause-8-Trust-MBE',
-        name: '1914 Purpose Clause 8 Trust u/w MBE',
-        id: '1914-purpose-lause-8-trust'
-    }, {
+		uri: '#/documents/1913-CSS-Appt-Trustees-MBE',
+		name: '1913 Court Appointment of Trustees u/w MBE',
+		id: '1913-css-appt-trustees-mbe'
+	}, {
 		uri: '#/documents/Fernald-Decision',
-		name: 'Fernald Decision',
+		name: '1913 Fernald Decision',
 		id: 'fernald'
+        }, {
+		uri: '#/documents/1914-Purpose-Clause-8-Trust-MBE',
+		name: '1914 Purpose Clause 8 Trust u/w MBE',
+		id: '1914-purpose-lause-8-trust'
 	}, {
 		uri: '/assets/The Banner Vol.30 No.3 Spring 2017.pdf',
 		name: 'The Banner Vol.30 No.3 Spring 2017',
